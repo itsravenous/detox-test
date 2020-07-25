@@ -2,13 +2,21 @@
   "testRunner": "jest",
   "runnerConfig": "e2e/config.json",
   "configurations": {
-    "ios": {
+    "ios.sim.debug": {
       "type": "ios.simulator",
       "binaryPath": "ios/Build/Products/Debug-iphonesimulator/DetoxTest.app",
       "build": "xcodebuild -workspace ios/DetoxTest.xcworkspace -scheme DetoxTest -configuration Debug -sdk iphonesimulator -derivedDataPath ios",
       "device": {
         "type": "iPhone 11"
       }
+    },
+    "ios.sim.release": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/Build/Products/Release-iphonesimulator/DetoxTest.app",
+      "build": "xcodebuild -workspace ios/DetoxTest.xcworkspace -scheme DetoxTest -configuration Release -sdk iphonesimulator -derivedDataPath ios",
+      "device": {
+         "type": "iPhone 11"
+       }
     },
     "android": {
       "type": "android.emulator",
